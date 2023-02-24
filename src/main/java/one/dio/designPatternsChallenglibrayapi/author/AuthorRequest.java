@@ -5,7 +5,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import one.dio.designPatternsChallenglibrayapi.core.validation.annotations.UniqueValue;
 
-//Classe de requisição "Front".
+//Classe de requisição "Front". DTO.
+//Classe para transacionar as informações do front para o back, para não expor dados sensíveis(exemplo: dinheiro, saldo, senha, etc.) e evitar alterações indesejadas no banco de dados.
 public class AuthorRequest {
 
     /* Attributes */

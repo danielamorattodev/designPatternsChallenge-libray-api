@@ -6,7 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "TB_AUTHOR")
+@Table(name = "TB_AUTHOR") //Criação da tabela autor no banco de dados.
 public class AuthorModel {
 
     /* Attributes */
@@ -14,14 +14,12 @@ public class AuthorModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false)
     private String name;
     @Column(nullable = false, unique = true) //para e-mail único, não repetido.
     private String email;
     @Column(nullable = false, length = 400)
     private String description;
-
     @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime createdAt; //data de criação do autor.
